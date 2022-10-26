@@ -1,0 +1,40 @@
+﻿@model IEnumerable<SportStore.Common.ModelDto.HistoryDto>
+
+<body>
+    <div class="wrapper">
+        <div class="page__main-block main-block">
+            <div align="center" class="main-block__container _container">
+                <h1 class="main-block__title" align="center">История платежей</h1>
+                @foreach (var history in Model)
+                {
+                    <div class="main-block__body2">
+                        <div class="body2-left">
+
+                            <img class="main__img" src="~/img/goods/@history.Img" alt="img" />
+                        </div>
+                        <div>
+
+                            <div class="title-couple main-couple">
+                                <div align="left" class="form__title-user">@history.Name</div>
+                                <form method="post" asp-action="Trash" asp-controller="Home">
+                                    <input class="form__input-card" name="historyId" value="@history.Id" hidden="hidden" />
+                                    <input class="form__input-trash" type="submit" value="" />
+                                </form>
+                            </div>
+                            <div class="title-couple">
+                                <div align="left" class="form__subtitle">Сумма к оплате: </div>
+                                <div align="left" class="form__title"> @history.Price руб</div>
+                            </div>
+                            <div class="title-couple">
+                                <div align="left" class="form__subtitle">Время продажи:</div>
+                                <div class="form__title title-time" align="right"> @history.PurchaseTime</div>
+                            </div>
+                        </div>
+
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+

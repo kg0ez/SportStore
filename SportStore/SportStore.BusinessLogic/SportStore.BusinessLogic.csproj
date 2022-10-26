@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Mapper\" />
+    <None Remove="AutoMapper" />
+    <None Remove="Services\" />
+    <None Remove="Services\Contracts\" />
+    <None Remove="Services\Implementations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mapper\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Contracts\" />
+    <Folder Include="Services\Implementations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SportStore.Common\SportStore.Common.csproj" />
+    <ProjectReference Include="..\SportStore.Models\SportStore.Models.csproj" />
+  </ItemGroup>
+</Project>

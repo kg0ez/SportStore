@@ -1,0 +1,33 @@
+﻿@model SportStore.Common.ModelDto.ClothesDto
+
+<section>
+    <div class="main">
+        <div class="main__image">
+            <img class="main__img" src="~/img/goods/@Model.Img" alt="img" />
+        </div>
+        <div class="main__text">
+            <div>
+
+            </div>
+            <h1 class="main__title">@Model.Model</h1>
+            <p class="main__decs"><span class="book__characteristics">Цена:</span>  @Model.Cost</p>
+            <p class="main__decs"><span class="book__characteristics">Состав:</span>  @Model.Characteristic.Composition</p>
+            <p class="main__decs"><span class="book__characteristics">Размер:</span>  @Model.Characteristic.TypeSize</p>
+            <p class="main__decs"><span class="book__characteristics">Тип:</span>  @Model.Characteristic.Type</p>
+            <p class="main__decs"><span class="book__characteristics">Страна:</span>  @Model.Characteristic.Country</p>
+            <p class="main__decs"><span class="book__characteristics">Сезон:</span>  @Model.Characteristic.Season</p>
+            <p class="main__decs"><span class="book__characteristics">Пол:</span>  @Model.Characteristic.Gender</p>
+            <p class="main__decs"><span class="book__characteristics">Описание:</span>  @Model.Characteristic.Description</p>
+
+            <div class="main__buttoms">
+                <form asp-route-id="@Model.Id" method="post" asp-action="BuyGoods" asp-controller="Home">
+                    <input class="card__link button-len" type="submit" value="Купить сейчас" />
+                </form>
+                <form asp-controller="Home" asp-action="AddBusket" method="post" asp-route-id="@Model.Id">
+                    <input class="card__link" type="submit" value="Добавить в корзину" />
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>

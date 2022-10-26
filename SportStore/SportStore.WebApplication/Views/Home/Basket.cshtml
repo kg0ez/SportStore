@@ -1,0 +1,39 @@
+﻿@model IEnumerable<SportStore.Common.ModelDto.BasketDto>
+
+
+<body>
+    <div class="container">
+        <section>
+            <h2 class="title">Корзина</h2>
+            <p class="desc">Спротивные товары для вас</p>
+            <div class="card">
+                @foreach (var item in Model)
+                {
+                    <div class="card__item">
+                        <div class="card__cover">
+                            <img class="card__img" src="~/img/goods/@item.Clothes.Img" alt="@item.Clothes.Model" />
+                        </div>
+                        <div class="card__info">
+                            <div>
+                                <p class="card__book">@item.Clothes.Model</p>
+                            </div>
+                            <p class="text__price">Текущая цена<span class="card__price">@item.Clothes.Cost</span></p>
+                        </div>
+                        <div class="card__b">
+                            <a asp-action="AboutGoods" asp-controller="Goods" asp-route-id="@item.Clothes.Id" class="card__link">Больше информации</a>
+
+                            <form asp-route-id="@item.Id" method="post" asp-action="BuyFromBasket" asp-controller="Home">
+                                <input class="card__link button-len" type="submit" value="Купить сейчас" />
+                            </form>
+
+                            <form asp-controller="Home" asp-action="DeleteBusket" method="post" asp-route-id="@item.Id">
+                                <input class="card__link button-len" type="submit" value="Удалить из корзины" />
+                            </form>
+                        </div>
+                    </div>
+                }
+            </div>
+        </section>
+    </div>
+</body>
+

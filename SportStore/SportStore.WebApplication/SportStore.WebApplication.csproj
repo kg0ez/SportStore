@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Handler\" />
+    <None Remove="Views\Store\" />
+    <None Remove="Views\Goods\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Handler\" />
+    <Folder Include="Views\Store\" />
+    <Folder Include="Views\Goods\" />
+    <Folder Include="wwwroot\img\" />
+    <Folder Include="wwwroot\img\history\" />
+    <Folder Include="wwwroot\img\goods\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SportStore.Common\SportStore.Common.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\img\" />
+    <Content Remove="wwwroot\img\history\" />
+    <Content Remove="wwwroot\img\goods\" />
+  </ItemGroup>
+</Project>

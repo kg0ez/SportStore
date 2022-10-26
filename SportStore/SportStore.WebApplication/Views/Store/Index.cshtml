@@ -1,0 +1,32 @@
+﻿@model List<SportStore.Common.ModelDto.ClothesStoreDto>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div class="container">
+        <section>
+            <h2 class="title">Склад</h2>
+            <div class="card">
+                @foreach (var clothesStore in Model)
+                {
+                    <div class="card__item-store">
+                        <div class="card__cover">
+                            <img class="card__img" src="~/img/goods/@clothesStore.Clothes.Img" alt="@clothesStore.Clothes.Model" />
+                        </div>
+                        <div class="card__info">
+                            <div>
+                                <p class="card__book">@clothesStore.Clothes.Model</p>
+                            </div>
+                            <p class="text__price">Цена:<span class="card__price"> @clothesStore.Clothes.Cost</span></p>
+                        </div>
+                        <div>
+                            <p class="card__book">В количестве: @clothesStore.Amount шт.</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </section>
+    </div>
+</body>
+
+

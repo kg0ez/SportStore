@@ -3,15 +3,64 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 25.0.1703.3
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{1199180D-64C8-42CC-AE23-40DB70D8E20F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportStore.Models", "SportStore.Models\SportStore.Models.csproj", "{6ADE1B2A-185E-4061-BFA1-926E00E4C8CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLogic", "BusinessLogic", "{29C05048-2D51-4848-BC9C-4D5C9A19B6B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportStore.BusinessLogic", "SportStore.BusinessLogic\SportStore.BusinessLogic.csproj", "{9D63F922-EAF1-4A13-9652-B1A8E0C5C908}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{31DF19B3-AD72-4A47-BD89-1FF4E79699EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportStore.Common", "SportStore.Common\SportStore.Common.csproj", "{67D1E279-1B5E-4C13-A9AE-D9B80396CA1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serv", "Serv", "{FA16B721-A008-4ADB-8320-10B76C77A7ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportStore.Serv", "SportStore.Serv\SportStore.Serv.csproj", "{483C0399-5D10-4B6F-A81B-6A7107FADCD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "View", "View", "{22A76DC2-36D8-473F-A52B-8E9C9FB96919}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportStore.WebApplication", "SportStore.WebApplication\SportStore.WebApplication.csproj", "{AB614F5D-D17C-449D-9FB1-C53262FC6D4D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6ADE1B2A-185E-4061-BFA1-926E00E4C8CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ADE1B2A-185E-4061-BFA1-926E00E4C8CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ADE1B2A-185E-4061-BFA1-926E00E4C8CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ADE1B2A-185E-4061-BFA1-926E00E4C8CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D63F922-EAF1-4A13-9652-B1A8E0C5C908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D63F922-EAF1-4A13-9652-B1A8E0C5C908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D63F922-EAF1-4A13-9652-B1A8E0C5C908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D63F922-EAF1-4A13-9652-B1A8E0C5C908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67D1E279-1B5E-4C13-A9AE-D9B80396CA1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67D1E279-1B5E-4C13-A9AE-D9B80396CA1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67D1E279-1B5E-4C13-A9AE-D9B80396CA1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67D1E279-1B5E-4C13-A9AE-D9B80396CA1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{483C0399-5D10-4B6F-A81B-6A7107FADCD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{483C0399-5D10-4B6F-A81B-6A7107FADCD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{483C0399-5D10-4B6F-A81B-6A7107FADCD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{483C0399-5D10-4B6F-A81B-6A7107FADCD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB614F5D-D17C-449D-9FB1-C53262FC6D4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB614F5D-D17C-449D-9FB1-C53262FC6D4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB614F5D-D17C-449D-9FB1-C53262FC6D4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB614F5D-D17C-449D-9FB1-C53262FC6D4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F10D519A-8A89-4C5E-94AE-A9C11D8813D6}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6ADE1B2A-185E-4061-BFA1-926E00E4C8CC} = {1199180D-64C8-42CC-AE23-40DB70D8E20F}
+		{9D63F922-EAF1-4A13-9652-B1A8E0C5C908} = {29C05048-2D51-4848-BC9C-4D5C9A19B6B3}
+		{67D1E279-1B5E-4C13-A9AE-D9B80396CA1C} = {31DF19B3-AD72-4A47-BD89-1FF4E79699EF}
+		{483C0399-5D10-4B6F-A81B-6A7107FADCD5} = {FA16B721-A008-4ADB-8320-10B76C77A7ED}
+		{AB614F5D-D17C-449D-9FB1-C53262FC6D4D} = {22A76DC2-36D8-473F-A52B-8E9C9FB96919}
 	EndGlobalSection
 EndGlobal
